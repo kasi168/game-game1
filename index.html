@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Emoji Catcher — เกมอีโมจิ</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="game-root">
+    <header>
+      <h1>Emoji Catcher</h1>
+      <div class="hud">
+        <div id="level">Level: 1</div>
+        <div id="score">Score: 0</div>
+        <div id="highscore">High: 0</div>
+      </div>
+    </header>
+
+    <main>
+      <canvas id="gameCanvas"></canvas>
+
+      <div id="mobile-controls" class="hidden">
+        <button id="leftBtn">◀</button>
+        <button id="rightBtn">▶</button>
+      </div>
+
+      <div id="overlay">
+        <div id="menu">
+          <h2>Emoji Catcher</h2>
+          <p>จับอีโมจิให้ตรงกับเป้าหมายก่อนจะตกพื้น!</p>
+          <label>
+            ชื่อผู้เล่น:
+            <input id="playerName" type="text" placeholder="ชื่อคุณ" maxlength="20" />
+          </label>
+          <div class="menu-buttons">
+            <button id="startBtn">เริ่มเล่น</button>
+            <button id="howBtn">วิธีเล่น</button>
+          </div>
+          <small>เก็บคะแนนสูงสุดจะบันทึกในเครื่อง</small>
+        </div>
+
+        <div id="pausePanel" class="hidden">
+          <h3>หยุดชั่วคราว</h3>
+          <button id="resumeBtn">กลับเล่น</button>
+          <button id="restartBtn">เริ่มใหม่</button>
+        </div>
+
+        <div id="howPanel" class="hidden">
+          <h3>วิธีเล่น</h3>
+          <ul>
+            <li>ย้ายตะกร้า (สี่เหลี่ยมล่าง) ด้วย ← → หรือ ปุ่มซ้าย/ขวา บนมือถือ</li>
+            <li>ตะกร้าต้องรับอีโมจิที่ตรงกับเป้าหมายที่มุมขวาบน</li>
+            <li>จับถูกได้คะแนน, ผิดจะเสียคะแนน</li>
+            <li>เลเวลจะเพิ่มเมื่อคะแนนถึงเกณฑ์ ความเร็วจะเพิ่มตามเลเวล</li>
+          </ul>
+          <button id="howClose">ปิด</button>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <small>ออกแบบโดย: YourName • เล่นบนมือถือ/เดสก์ท็อป</small>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
